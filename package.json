@@ -5,7 +5,7 @@
   "main": "bin/gendiff.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx jest"
   },
   "bin": {
     "gendiff": "bin/gendiff.js <filename1> <filename2>"
@@ -22,5 +22,16 @@
   "homepage": "https://github.com/ilija8897/frontend-project-46#readme",
   "dependencies": {
     "commander": "^11.1.0"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.6.0",
+    "eslint": "^8.40.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jest": "^27.2.2",
+    "jest": "^29.6.0",
+    "jest-cli": "^29.6.0",
+    "npm-check-updates": "^16.10.11",
+    "simple-git-hooks": "^2.8.1"
   }
 }
