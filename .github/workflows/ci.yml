@@ -1,10 +1,21 @@
 name: CI
-run-name: testing Actions 🚀
-on: [push]
+
+on:
+  push:
+    branches:
+      - '**'
+    tags:
+      - '**'
+
 jobs:
-  Explore-GitHub-Actions:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+      - run: npm ci
+      - run: npm run build --if-present
       - run: npm test
-      - run: npx eslint
