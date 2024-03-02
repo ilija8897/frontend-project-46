@@ -1,4 +1,4 @@
-name: CI
+name: self-check
 
 on:
   push:
