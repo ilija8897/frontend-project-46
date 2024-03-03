@@ -17,7 +17,7 @@ const TYPES = {
   COLLISION: 'COLLISION',
 };
 
-export function getDiff(firstFilePath, secondFilePath) {
+export function getDiffString(firstFilePath, secondFilePath) {
   const firstFile = getFile(firstFilePath);
   const secondFile = getFile(secondFilePath);
 
@@ -66,7 +66,7 @@ const initialCommander = () => {
     .description('Compares two configuration files and shows a difference.')
     .arguments('<filepath1> <filepath2>')
     .action(() => {
-      getDiff(process.argv[2], process.argv[3]);
+      getDiffString(process.argv[2], process.argv[3]);
     });
   program.parse();
 };
