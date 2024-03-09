@@ -3,19 +3,19 @@ import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { cwd } from 'node:process';
 import { program } from 'commander';
+import getParsedData from './parsers.js';
 
 function getFile(filePath) {
   return fs.readFileSync(path.resolve(cwd(), filePath));
 }
 
-function getParsedData(data) {
-  return JSON.parse(data);
-}
 const TYPES = {
   OVER: 'OVER',
   EXIST: 'EXIST',
   COLLISION: 'COLLISION',
 };
+
+const getFormat = (filePath) => path.extname(filePath).slice(1);
 
 export function getDiffString(firstFilePath, secondFilePath) {
   const firstFile = getFile(firstFilePath);
@@ -23,8 +23,8 @@ export function getDiffString(firstFilePath, secondFilePath) {
 
   if (JSON.stringify(firstFile) === JSON.stringify(secondFile)) return firstFile;
 
-  const firstDataParced = getParsedData(firstFile);
-  const secondDataParced = getParsedData(secondFile);
+  const firstDataParced = getParsedData(firstFile, getFormat(firstFilePath));
+  const secondDataParced = getParsedData(secondFile, getFormat(secondFilePath));
 
   const unionKeys = Object.keys({ ...firstDataParced, ...secondDataParced }).sort((a, b) => a.localeCompare(b));
 

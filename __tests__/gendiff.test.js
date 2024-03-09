@@ -11,10 +11,15 @@ function getFilePath(fileName) {
   return path.join(__dirname, `../__fixtures__/${fileName}`);
 }
 
+const formats = [
+  'json',
+  'yml',
+  'yaml',
+];
+
 describe('getDiff', () => {
-  console.log(fs.readFileSync(getFilePath('result.txt'), 'utf-8'));
-  it('Возвращает различия в JSON данных', () => {
-    const difference = getDiffString('__fixtures__/test-file-1.json', '__fixtures__/test-file-2.json');
+  test.each(formats)('Возвращает различия в JSON или YML файлах', (format) => {
+    const difference = getDiffString(`__fixtures__/file-1.${format}`, `__fixtures__/file-2.${format}`);
     expect(difference).toEqual(fs.readFileSync(getFilePath('result.txt'), 'utf-8'));
   });
 });
