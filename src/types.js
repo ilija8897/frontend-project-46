@@ -1,0 +1,9 @@
+const TYPES = {
+  OVER: 'OVER',
+  EXIST: 'EXIST',
+  COLLISION: 'COLLISION',
+  BRANCH: 'BRANCH',
+  UNMODIFIED: 'UNMODIFIED',
+};
+
+export default TYPES;

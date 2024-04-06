@@ -22,7 +22,8 @@
   "homepage": "https://github.com/ilija8897/frontend-project-46#readme",
   "dependencies": {
     "commander": "^11.1.0",
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@jest/globals": "^29.6.0",
