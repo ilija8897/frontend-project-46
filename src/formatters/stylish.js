@@ -31,4 +31,6 @@ const getMapElements = (type, element, deep = 1) => {
   }
 };
 
-export default getMapElements;
+const formatedData = (dataStructure) => '{}'.split('').join(`${dataStructure.reduce((diffAccum, { type, element }) => `${diffAccum}${getMapElements(type, element)}`, '')}\n`);
+
+export default formatedData;

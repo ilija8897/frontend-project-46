@@ -19,7 +19,9 @@ const formats = [
 
 describe('getDiff', () => {
   test.each(formats)('Возвращает различия в JSON или YML файлах', () => {
-    const difference = getDiffString('__fixtures__/file1.json', '__fixtures__/file2.json');
-    expect(difference).toEqual(fs.readFileSync(getFilePath('stylish-result.txt'), 'utf-8'));
+    const differenceStylish = getDiffString('__fixtures__/file1.json', '__fixtures__/file2.json');
+    const differencePlain = getDiffString('__fixtures__/file1.json', '__fixtures__/file2.json', 'plain');
+    expect(differenceStylish).toEqual(fs.readFileSync(getFilePath('stylish-result.txt'), 'utf-8'));
+    expect(differencePlain).toEqual(fs.readFileSync(getFilePath('plain-result.txt'), 'utf-8'));
   });
 });
