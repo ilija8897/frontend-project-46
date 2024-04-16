@@ -22,7 +22,7 @@ export function getDiffString(firstFilePath, secondFilePath, fileFormat = 'styli
 
   const dataStructure = getStructure(firstDataParced, secondDataParced);
 
-  const diffString = format(fileFormat)(dataStructure);
+  const diffString = format(dataStructure, fileFormat);
 
   return diffString.trim();
 }
