@@ -9,3 +9,15 @@
 
 Flat JSON
 [![asciicast](https://asciinema.org/a/654660.svg)](https://asciinema.org/a/654660)
+
+Flat YML
+[![asciicast](https://asciinema.org/a/cyGYSuFT40qPOptJCezcxLxYz.svg)](https://asciinema.org/a/cyGYSuFT40qPOptJCezcxLxYz)
+
+Stylish
+[![asciicast](https://asciinema.org/a/RSVrAMihCXrVmHxF4pLAxxfU0.svg)](https://asciinema.org/a/RSVrAMihCXrVmHxF4pLAxxfU0)
+
+Plain
+[![asciicast](https://asciinema.org/a/itiXpbBz6otTNE4TDMfbNdi0J.svg)](https://asciinema.org/a/itiXpbBz6otTNE4TDMfbNdi0J)
+
+JSON
+[![asciicast](https://asciinema.org/a/mtLntyo0ObASXhoIOMEf5q5Lt.svg)](https://asciinema.org/a/mtLntyo0ObASXhoIOMEf5q5Lt)
