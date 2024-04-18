@@ -9,5 +9,5 @@ program
   .arguments('<filepath1> <filepath2>')
   .action((filePath1, filePath2) => {
     console.log(getDiffString(filePath1, filePath2, program.opts().fileFormat));
-  })
-  .parse(process.argv);
+  });
+program.parse();
