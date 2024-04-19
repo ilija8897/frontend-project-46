@@ -19,7 +19,7 @@ const formatValue = (value) => {
 const getMapElements = (type, element, parent = []) => {
   switch (type) {
     case TYPES.UNMODIFIED:
-      return null;
+      return '';
     case TYPES.OVER:
       return `Property '${getName(element.key, parent)}' was added with value: ${formatValue(element.value)}\n`;
     case TYPES.EXIST:
