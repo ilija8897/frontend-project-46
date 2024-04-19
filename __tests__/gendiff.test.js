@@ -2,7 +2,7 @@ import { describe } from '@jest/globals';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
-import { getDiffString } from '../src/index.js';
+import getDiffString from '../src/index.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
