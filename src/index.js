@@ -12,7 +12,7 @@ function getFile(filePath) {
 
 const getFormat = (filePath) => path.extname(filePath).slice(1);
 
-export function getDiffString(firstFilePath, secondFilePath, fileFormat = 'stylish') {
+function getDiffString(firstFilePath, secondFilePath, fileFormat = 'stylish') {
   const firstFile = getFile(firstFilePath);
   const secondFile = getFile(secondFilePath);
 
